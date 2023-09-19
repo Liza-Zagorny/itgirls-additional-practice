@@ -1,5 +1,11 @@
+package _main;
+
+import service.MultiplicationService;
+
 public class MainTask05 {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        MultiplicationService multiplicationService = new MultiplicationService();
+        int[] numbers = MultiplicationService.getNumbers();
+        multiplicationService.printMultiplicationTable(numbers);
     }
 }
