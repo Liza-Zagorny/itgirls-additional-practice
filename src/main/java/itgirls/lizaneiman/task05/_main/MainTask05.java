@@ -8,13 +8,11 @@ public class MainTask05 {
         // Multiplication table exercise
         MultiplicationService multiplicationService = new MultiplicationService();
         int[] numbers = MultiplicationService.getNumbers();
-        //multiplicationService.printMultiplicationTable(numbers);
+        multiplicationService.printMultiplicationTable(numbers);
 
         // Segments exercise
         SegmentService segmentService = new SegmentService();
         segmentService.enterCoordinates();
         segmentService.calcSegmentLength();
-
-
     }
 }

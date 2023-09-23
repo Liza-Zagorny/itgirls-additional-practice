@@ -21,7 +21,7 @@ public class SegmentService {
 
     public void calcSegmentLength() {
         double lengthSquare = Math.pow(bCoords[0] - aCoords[0], 2) + Math.pow(bCoords[1] - aCoords[1], 2);
-        double length =  Math.sqrt(lengthSquare);
-        System.out.println("Длина отрезка АВ (A"+ Arrays.toString(aCoords)+", B"+ Arrays.toString(bCoords)+"): "+length);
+        double length = Math.sqrt(lengthSquare);
+        System.out.println("Длина отрезка АВ (A" + Arrays.toString(aCoords) + ", B" + Arrays.toString(bCoords) + "): " + length);
     }
 }
