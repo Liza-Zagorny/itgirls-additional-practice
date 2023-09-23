@@ -13,6 +13,7 @@ public class MainTask05 {
         // Segments exercise
         SegmentService segmentService = new SegmentService();
         segmentService.enterCoordinates();
+        segmentService.calcSegmentLength();
 
 
     }
