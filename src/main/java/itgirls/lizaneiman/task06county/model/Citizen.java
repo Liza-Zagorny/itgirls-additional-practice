@@ -12,8 +12,12 @@ public class Citizen {
         return ++count;
     }
 
-    public int getID() {
-        return Citizen.generateID();
+    public void setId() {
+        this.id = generateID();
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setFirstName(String firstName) {

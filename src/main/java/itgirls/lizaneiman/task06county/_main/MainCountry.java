@@ -15,12 +15,23 @@ public class MainCountry {
         CitizenService citizenService = new CitizenService();
         List<Citizen> citizenList = new ArrayList<>();
 
-        while(Citizen.count < country.getPopulation()) {
-            Citizen citizen = citizenService.generateCitizen();
-            citizenList.add(citizen);
-            System.out.print(citizen.getID()+" ");
-            System.out.println(citizen);
+        String word = citizenService.generateWord();
+        String word1 = citizenService.generateWord();
+        String word2 = citizenService.generateWord();
 
-        }
+        System.out.println(word);
+        System.out.println(word2);
+        System.out.println(word1);
+
+
+//        while(Citizen.count < country.getPopulation()) {
+//            Citizen citizen = citizenService.generateCitizen();
+//            citizenList.add(citizen);
+//            System.out.print(citizen.getId()+" ");
+//            //System.out.print(citizen.getFirstName());
+//            //System.out.print(citizen.getLastName());
+//            //System.out.println(citizen.getAge()+" ");
+//
+//        }
     }
 }
