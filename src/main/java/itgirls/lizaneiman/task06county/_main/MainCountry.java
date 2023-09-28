@@ -18,7 +18,9 @@ public class MainCountry {
         while(Citizen.count < country.getPopulation()) {
             Citizen citizen = citizenService.generateCitizen();
             citizenList.add(citizen);
-            System.out.println(citizen.getID());
+            System.out.print(citizen.getID()+" ");
+            System.out.println(citizen);
+
         }
     }
 }

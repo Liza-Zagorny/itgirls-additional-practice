@@ -8,10 +8,43 @@ public class Citizen {
     private static Country country;
     public static int count;
 
-    static int generateID(){
-        return  count++;
+    static int generateID() {
+        return ++count;
     }
+
     public int getID() {
         return Citizen.generateID();
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public static Country getCountry() {
+        return country;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public static void setCountry() {
+        Citizen.country = Country.getInstance();
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 }
