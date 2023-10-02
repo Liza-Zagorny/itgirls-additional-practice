@@ -51,4 +51,9 @@ public class Citizen {
     public String getLastName() {
         return lastName;
     }
+
+    @Override
+    public String toString() {
+        return "Citizen{" + "id='" + id + '\'' + ", age=" + age + '\'' + ", firstName=" + firstName + '\'' + ", lastName=" + lastName + '}';
+    }
 }

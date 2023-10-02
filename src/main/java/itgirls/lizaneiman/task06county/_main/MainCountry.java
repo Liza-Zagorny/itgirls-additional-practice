@@ -24,14 +24,11 @@ public class MainCountry {
         System.out.println(word1);
 
 
-//        while(Citizen.count < country.getPopulation()) {
-//            Citizen citizen = citizenService.generateCitizen();
-//            citizenList.add(citizen);
-//            System.out.print(citizen.getId()+" ");
-//            //System.out.print(citizen.getFirstName());
-//            //System.out.print(citizen.getLastName());
-//            //System.out.println(citizen.getAge()+" ");
-//
-//        }
+        while(Citizen.count < country.getPopulation()) {
+            Citizen citizen = citizenService.generateCitizen();
+            citizenList.add(citizen);
+            System.out.println(citizen.toString());
+
+        }
     }
 }
