@@ -30,4 +30,9 @@ public class Region {
     public String getAdministrativeCentre() {
         return administrativeCentre;
     }
+
+    @Override
+    public String toString() {
+        return "Region{" + "name='" + name + '\'' + ", settlementsNames=" + settlementsNames + ", administrativeCentre='" + administrativeCentre + '\'' + '}';
+    }
 }

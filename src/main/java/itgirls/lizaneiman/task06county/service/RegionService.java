@@ -6,10 +6,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegionService {
-    List<String> regionsNamesList = new ArrayList<>(List.of("Saint Andrew",
+    private final List<String> regionsNamesList = new ArrayList<>(List.of("Saint Andrew",
             "Saint David", "Saint George", "Saint John", "Saint Joseph",
             "Saint Luke", "Saint Mark", "Saint Patrick", "Saint Paul",
             "Saint Peter"));
+    private static RegionService instance = null;
+
+    private RegionService() {
+    }
+
+    public static RegionService getInstance() {
+        if (instance == null) {
+            instance = new RegionService();
+        }
+        return instance;
+    }
+
+    public List<String> getRegionsNamesList() {
+        return regionsNamesList;
+    }
 
     public Region createRegionByName(String regionName) {
         Region region = new Region();
@@ -70,5 +85,13 @@ public class RegionService {
             }
         }
         return region;
+    }
+
+    public List<Region> setRegionList() {
+        List<Region> regions = new ArrayList<>();
+        for (String regionName : regionsNamesList) {
+            regions.add(instance.createRegionByName(regionName));
+        }
+        return regions;
     }
 }

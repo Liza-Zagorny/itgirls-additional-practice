@@ -41,6 +41,14 @@ public class Country {
         this.citizens = citizens;
     }
 
+    public List<Region> getRegions() {
+        return regions;
+    }
+
+    public void setRegions(List<Region> regions) {
+        this.regions = regions;
+    }
+
     @Override
     public String toString() {
         return "Country{" + "name='" + instance.name + '\'' + ", area=" + instance.areaSqKm + '\'' + ", population=" + instance.population + '\'' + ", regions=" + instance.regions + ", citizens=" + instance.citizens + '}';
