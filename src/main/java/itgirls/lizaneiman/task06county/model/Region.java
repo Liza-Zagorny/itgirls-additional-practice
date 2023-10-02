@@ -4,6 +4,30 @@ import java.util.List;
 
 public class Region {
     private String name;
-    private List<City> cities;
-    private City administrativeCentre;
+    private List<String> settlementsNames;
+    private String administrativeCentre;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setSettlementsNames(List<String> settlementsNames) {
+        this.settlementsNames = settlementsNames;
+    }
+
+    public List<String> getSettlementsNames() {
+        return settlementsNames;
+    }
+
+    public void setAdministrativeCentre(String administrativeCentre) {
+        this.administrativeCentre = administrativeCentre;
+    }
+
+    public String getAdministrativeCentre() {
+        return administrativeCentre;
+    }
 }
