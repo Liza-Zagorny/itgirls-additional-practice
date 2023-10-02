@@ -3,7 +3,10 @@ package model;
 import java.util.List;
 
 public class Country {
+    private final String name = "Dominica";
     private List<Region> regions;
+    private final int areaSqKm = 751;
+    private final long population = 7;
     private List<Citizen> citizens;
     private static Country instance = null;
 
@@ -36,5 +39,10 @@ public class Country {
 
     public void setCitizens(List<Citizen> citizens) {
         this.citizens = citizens;
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" + "name='" + instance.name + '\'' + ", area=" + instance.areaSqKm + '\'' + ", population=" + instance.population + '\'' + ", regions=" + instance.regions + ", citizens=" + instance.citizens + '}';
     }
 }
