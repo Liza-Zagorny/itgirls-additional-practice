@@ -2,7 +2,7 @@ package model;
 
 public class District {
     private String districtDirection;
-    private City city;
+    private String cityName;
 
     public void setDistrictDirection(String districtDirection) {
         this.districtDirection = districtDirection;
@@ -12,11 +12,11 @@ public class District {
         return districtDirection;
     }
 
-    public void setCity(City city) {
-        this.city = city;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 
-    public City getCity() {
-        return city;
+    public String getCityName() {
+        return cityName;
     }
 }
