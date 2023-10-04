@@ -19,4 +19,9 @@ public class District {
     public String getCityName() {
         return cityName;
     }
+
+    @Override
+    public String toString() {
+        return "District{" + "districtDirection='" + districtDirection + '\'' + ", cityName='" + cityName + '\'' + '}';
+    }
 }

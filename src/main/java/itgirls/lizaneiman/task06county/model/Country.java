@@ -45,6 +45,6 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country{" + "countryName='" + instance.countryName + '\'' + ", area=" + instance.areaSqKm + '\'' + ", population=" + instance.population + '\'' +"capitalName='" + instance.capitalName + '\'' + ", regions=" + instance.regions  + '}';
+        return "Country{" + "countryName='" + instance.countryName + '\'' + ", area=" + instance.areaSqKm  + ", population=" + instance.population  +"capitalName='" + instance.capitalName + '\'' + ", regions=" + instance.regions  + '}';
     }
 }
