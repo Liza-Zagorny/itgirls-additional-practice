@@ -113,4 +113,19 @@ public class RegionService {
         }
         return regions;
     }
+
+    public double calcTotalArea( List<Region> regions) {
+        double totalAreaSqKm = 0;
+        for ( Region region: regions) {
+            totalAreaSqKm += region.getAreaSqKm();
+        }
+        return totalAreaSqKm;
+    }
+    public long calcTotalPopulation( List<Region> regions) {
+        long totalPopulation = 0;
+        for ( Region region: regions) {
+            totalPopulation += region.getPopulation();
+        }
+        return totalPopulation;
+    }
 }

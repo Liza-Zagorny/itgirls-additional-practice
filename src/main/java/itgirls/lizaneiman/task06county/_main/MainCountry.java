@@ -10,11 +10,9 @@ import java.util.List;
 public class MainCountry {
     public static void main(String[] args) {
         System.out.println("Country Exercise");
-
         Country country = Country.getInstance();
 
-        RegionService regionService = RegionService.getInstance();
-        country.setRegions(regionService.setRegionList());
+        System.out.println(country);
 
     }
 }
