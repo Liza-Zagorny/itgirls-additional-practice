@@ -13,9 +13,9 @@ import java.util.List;
 public class MainCountry {
     public static void main(String[] args) {
         System.out.println("Country Exercise");
-        CityService cityService = CityService.getInstance();
-        City city1 = cityService.generateCity("Roseau");
-        System.out.println(city1);
+        Country country = Country.getInstance();
+
+        System.out.println(country);
 
 
     }
