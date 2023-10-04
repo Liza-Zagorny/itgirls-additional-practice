@@ -8,6 +8,8 @@ public class Region {
     private String name;
     private List<String> settlementsNames;
     private City administrativeCentre;
+    private long population;
+    private double areaSqKm;
     CityService cityService = CityService.getInstance();
 
 
@@ -31,6 +33,22 @@ public class Region {
 
         this.administrativeCentre = cityService.generateCity(administrativeCentre);
         ;
+    }
+
+    public void setAreaSqKm(double areaSqKm) {
+        this.areaSqKm = areaSqKm;
+    }
+
+    public double getAreaSqKm() {
+        return areaSqKm;
+    }
+
+    public void setPopulation(long population) {
+        this.population = population;
+    }
+
+    public long getPopulation() {
+        return population;
     }
 
     public City getAdministrativeCentre() {

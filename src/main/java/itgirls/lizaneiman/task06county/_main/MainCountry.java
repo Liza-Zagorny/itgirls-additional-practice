@@ -1,8 +1,11 @@
 package _main;
 
 import model.Country;
+import model.Region;
 import service.CitizenService;
 import service.RegionService;
+
+import java.util.List;
 
 public class MainCountry {
     public static void main(String[] args) {
@@ -10,10 +13,8 @@ public class MainCountry {
 
         Country country = Country.getInstance();
 
-        CitizenService citizenService = new CitizenService();
         RegionService regionService = RegionService.getInstance();
         country.setRegions(regionService.setRegionList());
 
-        System.out.println(country);
     }
 }
