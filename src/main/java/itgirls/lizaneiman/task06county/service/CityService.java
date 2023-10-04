@@ -20,7 +20,7 @@ public class CityService {
         }
         return instance;
     }
-    DistrictService districtService = new DistrictService();
+    DistrictService districtService = DistrictService.getInstance();
     public City generateCity(String cityName) {
         City city = new City();
         city.setName(cityName);

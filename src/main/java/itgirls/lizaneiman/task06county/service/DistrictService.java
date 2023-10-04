@@ -1,11 +1,24 @@
 package service;
 
+import model.City;
 import model.District;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DistrictService {
+
+    private static DistrictService instance = null;
+
+    private DistrictService() {
+    }
+
+    public static DistrictService getInstance() {
+        if (instance == null) {
+            instance = new DistrictService();
+        }
+        return instance;
+    }
 
     public List<District> createDistrictsInCity (String cityName) {
         List<District> districts = new ArrayList<>();
