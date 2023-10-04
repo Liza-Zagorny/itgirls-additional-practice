@@ -6,6 +6,8 @@ public class City {
     private String name;
     private boolean isCapital;
     private boolean isAdministrativeCentre;
+    private long population;
+    private List<Citizen> citizensList;
     private List<District> districts;
 
     public void setName(String name) {
@@ -32,6 +34,22 @@ public class City {
         return isAdministrativeCentre;
     }
 
+    public void setPopulation(long population) {
+        this.population = population;
+    }
+
+    public long getPopulation() {
+        return population;
+    }
+
+    public void setCitizensList(List<Citizen> citizensList) {
+        this.citizensList = citizensList;
+    }
+
+    public List<Citizen> getCitizensList() {
+        return citizensList;
+    }
+
     public void setDistricts(List<District> districts) {
         this.districts = districts;
     }
@@ -42,6 +60,6 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" + "name='" + name + '\'' + ", isCapital=" + isCapital + ", isAdministrativeCentre=" + isAdministrativeCentre + ", districts=" + districts + '}';
+        return "City{" + "name='" + name + '\'' + ", isCapital=" + isCapital + ", isAdministrativeCentre=" + isAdministrativeCentre + ", districts=" + districts + ", population=" + population + ", citizensList=" + citizensList +'}';
     }
 }
