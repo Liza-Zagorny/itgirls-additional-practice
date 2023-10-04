@@ -30,9 +30,7 @@ public class Region {
     }
 
     public void setAdministrativeCentre(String administrativeCentre) {
-
         this.administrativeCentre = cityService.generateCity(administrativeCentre);
-        ;
     }
 
     public void setAreaSqKm(double areaSqKm) {
