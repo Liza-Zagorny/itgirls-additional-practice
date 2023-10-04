@@ -1,11 +1,15 @@
 package model;
 
+import service.CityService;
+
 import java.util.List;
 
 public class Region {
     private String name;
     private List<String> settlementsNames;
-    private String administrativeCentre;
+    private City administrativeCentre;
+    CityService cityService = CityService.getInstance();
+
 
     public void setName(String name) {
         this.name = name;
@@ -24,15 +28,17 @@ public class Region {
     }
 
     public void setAdministrativeCentre(String administrativeCentre) {
-        this.administrativeCentre = administrativeCentre;
+
+        this.administrativeCentre = cityService.generateCity(administrativeCentre);
+        ;
     }
 
-    public String getAdministrativeCentre() {
+    public City getAdministrativeCentre() {
         return administrativeCentre;
     }
 
     @Override
     public String toString() {
-        return "Region{" + "name='" + name + '\'' + ", settlementsNames=" + settlementsNames + ", administrativeCentre='" + administrativeCentre + '\'' + '}';
+        return "Region{" + "name='" + name + '\'' + ", settlementsNames=" + settlementsNames + ", administrativeCentre=" + administrativeCentre + '}';
     }
 }
