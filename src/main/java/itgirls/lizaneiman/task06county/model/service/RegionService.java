@@ -1,6 +1,6 @@
-package service;
+package model.service;
 
-import model.Region;
+import model.entity.Region;
 
 import java.util.ArrayList;
 import java.util.List;

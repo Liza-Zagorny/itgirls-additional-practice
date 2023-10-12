@@ -1,6 +1,6 @@
-package service;
+package model.service;
 
-import model.Citizen;
+import model.entity.Citizen;
 
 public class CitizenService {
 

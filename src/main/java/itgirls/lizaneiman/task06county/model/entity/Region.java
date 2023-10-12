@@ -1,6 +1,6 @@
-package model;
+package model.entity;
 
-import service.CityService;
+import model.service.CityService;
 
 import java.util.List;
 

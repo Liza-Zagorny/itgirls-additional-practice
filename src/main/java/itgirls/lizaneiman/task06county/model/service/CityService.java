@@ -1,8 +1,8 @@
-package service;
+package model.service;
 
-import model.Citizen;
-import model.City;
-import model.Country;
+import model.entity.Citizen;
+import model.entity.City;
+import model.entity.Country;
 
 import java.util.ArrayList;
 import java.util.List;

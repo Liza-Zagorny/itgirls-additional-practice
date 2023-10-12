@@ -1,7 +1,6 @@
-package service;
+package model.service;
 
-import model.City;
-import model.District;
+import model.entity.District;
 
 import java.util.ArrayList;
 import java.util.List;
