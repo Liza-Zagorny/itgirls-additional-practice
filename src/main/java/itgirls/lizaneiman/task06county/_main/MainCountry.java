@@ -1,22 +1,12 @@
 package _main;
 
-import model.Citizen;
-import model.City;
-import model.Country;
-import model.Region;
-import service.CitizenService;
-import service.CityService;
-import service.RegionService;
-
-import java.util.List;
+import model.entity.Country;
+import util.Menu;
 
 public class MainCountry {
     public static void main(String[] args) {
-        System.out.println("Country Exercise");
-        Country country = Country.getInstance();
+       Menu menu = new Menu();
 
-        System.out.println(country);
-
-
+       menu.startMenu();
     }
 }
