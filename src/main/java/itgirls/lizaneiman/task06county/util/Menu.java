@@ -1,6 +1,8 @@
 package util;
 
 import controller.ViewController;
+import model.entity.City;
+import model.service.CountryService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ public class Menu {
                 "Display the average age of country citizens",
                 "Display all citizens with selected full name length",
                 "Display all citizens with first name starting with selected letter"
-                ));
+        ));
     }
 
     public void startMenu() {
@@ -62,7 +64,43 @@ public class Menu {
     }
 
     private void navigateTo(int choice) {
-        viewController.printMessage("You've chosen: " + choice);
+        CountryService countryService = CountryService.getInstance();
+        viewController.printMessage("You've chosen to " + menuOptionsMessages.get(choice - 1).toLowerCase() + ":");
+        switch (choice) {
+            case 1: {
+                viewController.printMessage(countryService.getCapitalName());
+            }
+            break;
+            case 2: {
+                viewController.printMessage(countryService.getRegionsNumber());
+            }
+            break;
+            case 3: {
+                viewController.printMessage(countryService.getTotalCountryArea());
+            }
+            break;
+            case 4: {
+                ArrayList<City> administrativeCentres = countryService.getListOfAdministrativeCentres();
+                for(City centre: administrativeCentres) {
+                    viewController.printMessage(centre.toString());
+                }
+            }
+            break;
+            case 5: {
+                viewController.printMessage("");
+            }
+            break;
+            case 6: {
+                viewController.printMessage("");
+            }
+            break;
+            case 7: {
+                viewController.printMessage("");
+            }
+            break;
+            default:
+                System.out.println("You've entered an illegal number. Please restart the program");
+        }
     }
 
     private void checkInt(Scanner scanner) {

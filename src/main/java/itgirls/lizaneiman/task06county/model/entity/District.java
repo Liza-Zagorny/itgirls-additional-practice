@@ -22,6 +22,6 @@ public class District {
 
     @Override
     public String toString() {
-        return "District{" + "districtDirection='" + districtDirection + '\'' + ", cityName='" + cityName + '\'' + '}';
+        return "District{" + "districtDirection='" + districtDirection + '\''+ '}';
     }
 }

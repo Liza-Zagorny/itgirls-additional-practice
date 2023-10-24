@@ -35,7 +35,7 @@ public class Country {
     }
 
     public String getCapitalName() {
-        return "Roseau";
+        return this.capitalName;
     }
 
     public void setAreaSqKm(double areaSqKm) {

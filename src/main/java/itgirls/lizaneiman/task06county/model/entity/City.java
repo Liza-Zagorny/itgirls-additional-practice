@@ -60,6 +60,6 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{" + "name='" + name + '\'' + ", isCapital=" + isCapital + ", isAdministrativeCentre=" + isAdministrativeCentre + ", districts=" + districts + ", population=" + population + ", citizensList=" + citizensList +'}';
+        return "City{" + "name='" + name + '\'' + ", isCapital=" + isCapital + ", isAdministrativeCentre=" + isAdministrativeCentre + ", districts=" + districts + ", population=" + population  +'}';
     }
 }
