@@ -14,12 +14,11 @@ import java.util.Scanner;
 public class Menu {
 
     private final ViewController viewController;
-    public final ArrayList<Integer> menuOptionsNumbers;
+
     public final ArrayList<String> menuOptionsMessages;
 
     public Menu() {
         viewController = new ViewController();
-        menuOptionsNumbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 7));
         menuOptionsMessages = new ArrayList<>(List.of(
                 "Display a Country Capital",
                 "Display a number of Regions",
@@ -32,30 +31,26 @@ public class Menu {
     }
 
     public void startMenu() {
-        boolean isRunning = true;
         Scanner scanner = new Scanner(System.in);
         viewController.printMessage("Hello, this is a Country Menu.");
 
         boolean shouldContinue;
         do {
             this.showMenuOptions();
+            viewController.printNewLine();
             viewController.printMessage("Please type any number to display desired info:");
             this.checkInt(scanner);
             shouldContinue = this.shouldContinueMenu();
         } while (shouldContinue);
-
         viewController.printMessage("You've chosen to end the program. Bye-bye!");
     }
 
     private void showMenuOptions() {
         viewController.printNewLine();
-        viewController.printMessage("<1> ");
-        viewController.printMessage("<2> Display a number of Regions");
-        viewController.printMessage("<3> Display a total area of the Country");
-        viewController.printMessage("<4> Display a list of Administrative Centres");
-        viewController.printMessage("<5> Display the average age of country citizens");
-        viewController.printMessage("<6> Display all citizens with selected full name length");
-        viewController.printMessage("<7> Display all citizens with first name starting with selected letter");
+        for (int i = 0; i < this.menuOptionsMessages.size(); i++) {
+            int number = i + 1;
+            viewController.printMessage("<" + number + "> " + this.menuOptionsMessages.get(i));
+        }
     }
 
     private boolean shouldContinueMenu() {
@@ -73,7 +68,7 @@ public class Menu {
     private void checkInt(Scanner scanner) {
         if (scanner.hasNextInt()) {
             int menuChoice = scanner.nextInt();
-            if (menuOptionsNumbers.contains(menuChoice)) {
+            if (menuOptionsMessages.size() >= menuChoice) {
                 this.navigateTo(menuChoice);
             } else {
                 viewController.printMessage("You've entered an illegal number. Please choose between 1-7.");
